@@ -5,6 +5,7 @@ public class País {
 	private String codigoIso = "";
 	private String nome = "";
 	private double dimensao;
+	private double populacao;
 
 	public País(String codigoIso, String nome, double dimensao) {
 		super();
@@ -36,8 +37,6 @@ public class País {
 	public void setDimensao(double dimensao) {
 		this.dimensao = dimensao;
 	}
-	
-	private double populacao;
 
 	public double getPopulacao() {
 		return populacao;
@@ -47,4 +46,14 @@ public class País {
 		this.populacao = populacao;
 	}
 
+	public String toString() {
+		String pais = "";
+		
+		pais += "Nome do país: "       + this.getNome()      + "\n";
+		pais += "Código Iso do país: " + this.getCodigoIso() + "\n";
+		pais += "Dimensão do país: "   + this.getDimensao()  + "\n";
+				
+		return pais;
+	}
+	
 }
